@@ -6,4 +6,4 @@ echo "DATABASE_ID=${DATABASE_ID}" >> .env.local
 
 npm install --global yarn
 
-npm ci
+npm i
