@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
 
 .header {
   display: block;
   padding: 15px 0;
   text-align: center;
-  font-family: 'Zen Antique', cursive;
+  font-family: 'Klee One', cursive;
 }
 .header h1 {
   padding: 0.5rem 0;
