@@ -10,11 +10,15 @@ class MyDocument extends Document {
             rel="preconnect"
             href="https://fonts.gstatic.com"
             crossOrigin=""
-          />
+          ></link>
           <link
             href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap"
             rel="stylesheet"
-          />
+          ></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />
