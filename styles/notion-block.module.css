@@ -125,12 +125,27 @@
 .callout div:first-child {
   margin-right: 0.7rem;
 }
+
 .callout[data-icon='⚠️'] {
   display: block;
 }
 .callout div[data-icon='⚠️']::after {
-  content: 'POINT';
+  content: '注意点';
   font-family: 'M PLUS 1p', sans-serif;
+}
+.callout div[data-icon='⚠️'] + div {
+  margin-top: 1rem;
+}
+
+.callout[data-icon='💡'] {
+  display: block;
+}
+.callout div[data-icon='💡']::after {
+  content: 'ポイント';
+  font-family: 'M PLUS 1p', sans-serif;
+}
+.callout div[data-icon='💡'] + div {
+  margin-top: 1rem;
 }
 
 .table {
