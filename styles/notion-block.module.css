@@ -300,6 +300,11 @@
 
 .tableOfContents {
 }
+.tableOfContents::before {
+  content: '📖目次';
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 1.2rem;
+}
 .tableOfContents > a {
   display: block;
   line-height: 1.8rem;
