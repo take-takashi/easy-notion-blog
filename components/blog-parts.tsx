@@ -24,9 +24,7 @@ export const PostTitle = ({ post, enableLink = true }) => {
   return (
     <h3 className={styles.postTitle}>
       {enableLink ? (
-        <Link href={getBlogLink(post.Slug)}>
-          {postTitle}
-        </Link>
+        <Link href={getBlogLink(post.Slug)}>{postTitle}</Link>
       ) : (
         postTitle
       )}
@@ -54,7 +52,7 @@ export const PostExcerpt = ({ post }) => (
 
 export const PostBody = ({ blocks }) => (
   <div className={styles.postBody}>
-    <NotionBlocks blocks={blocks} />
+    <NotionBlocks blocks={blocks} isRoot={true} />
   </div>
 )
 
@@ -119,9 +117,7 @@ export const PostLinkList = ({ posts }) => {
       {posts.map((post: Post) => {
         return (
           <li key={post.Slug}>
-            <Link href={getBlogLink(post.Slug)}>
-              {post.Title}
-            </Link>
+            <Link href={getBlogLink(post.Slug)}>{post.Title}</Link>
           </li>
         )
       })}
@@ -137,9 +133,7 @@ export const TagLinkList = ({ tags }) => {
       {tags.map((tag: string) => {
         return (
           <li key={tag}>
-            <Link href={getTagLink(tag)}>
-              {tag}
-            </Link>
+            <Link href={getTagLink(tag)}>{tag}</Link>
           </li>
         )
       })}

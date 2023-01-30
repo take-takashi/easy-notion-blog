@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { getBlock } from '../../../lib/notion/client'
 
-const ApiBlock = async function(req: NextApiRequest, res: NextApiResponse) {
+const ApiBlock = async function (req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.statusCode = 400
     res.end()
@@ -21,6 +21,12 @@ const ApiBlock = async function(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     const block = await getBlock(id)
+
+    if (block.Type !== 'image') {
+      res.statusCode = 404
+      res.end()
+      return
+    }
 
     res.setHeader('Content-Type', 'application/json')
     res.write(JSON.stringify(block))
